@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8">
+
+  <!-- Site Properties -->
+  <title>Login Example - Semantic</title>
+    <link rel="stylesheet" type="text/css" href="/static/Semantic-UI-CSS-master/semantic.css">
+
+    <script src="/static/javascript/jquery-3.2.1.js"></script>
+
+    <script src="/static/Semantic-UI-CSS-master/semantic.js"></script>
+
+  <style type="text/css">
+    body {
+      background-color: #DADADA;
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : '请输入你的电子邮箱'
+                },
+                {
+                  type   : 'email',
+                  prompt : '请输入一个有效的邮箱地址'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : '请输入你的密码'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : '请输入6位以上的密码'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <img src="/static/images/logo-gbf.png" class="image">
+      <div class="content">
+        登入你的账号吧
+      </div>
+    </h2>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button">Login</div>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+      希望成为我们的会员吗? <a href="#">点击这里注册</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body></html>
