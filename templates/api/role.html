@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <p>{{ role_data.name }}</p>
-    <p>{{ role_data.skills }}</p>
+    {% for role in roles %}
+        {{ role.name }}
+    {% endfor %}
 </body>
 </html>
