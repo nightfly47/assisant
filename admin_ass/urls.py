@@ -8,5 +8,5 @@ urlpatterns = [
     path('role/', query.role_query),
     path('summon/', query.summon_query),
     path('boss/', query.boss_query),
-    path('config/', query.config_query),
+    path('config/', query.user_skills_config),
 ]

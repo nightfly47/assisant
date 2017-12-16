@@ -14,6 +14,4 @@ def admin_home(request):
 
 
 def user_create(request):
-
-
     return HttpResponse('create success')
